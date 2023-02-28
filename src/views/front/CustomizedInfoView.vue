@@ -39,7 +39,7 @@
     <div class="CZIContent">
       <section>
         <div class="sec1">
-          <img src="../../../images/Group 26.png" alt="訂製需求" />
+          <img src="../../../images/Group26.png" alt="訂製需求" />
           <img src="../../../images/Polygon 1.png" style="margin: auto" />
         </div>
         <div class="sec2">
@@ -55,7 +55,7 @@
       </section>
       <section>
         <div class="sec1">
-          <img src="../../../images/Group 25.png" alt="訂製需求" />
+          <img src="../../../images/Group25.png" alt="訂製需求" />
           <img src="../../../images/Polygon 1.png" style="margin: auto" />
         </div>
         <div class="sec2">
@@ -71,7 +71,7 @@
       </section>
       <section>
         <div class="sec1">
-          <img src="../../../images/Group 23.png" alt="訂製需求" />
+          <img src="../../../images/Group23.png" alt="訂製需求" />
           <img src="../../../images/Polygon 1.png" style="margin: auto" />
         </div>
         <div class="sec2">
@@ -87,7 +87,7 @@
       </section>
       <section>
         <div class="sec1">
-          <img src="../../../images/Group 24.png" alt="訂製需求" />
+          <img src="../../../images/Group24.png" alt="訂製需求" />
           <img src="../../../images/Polygon 1.png" style="margin: auto" />
         </div>
         <div class="sec2">

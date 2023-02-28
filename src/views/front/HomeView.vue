@@ -82,13 +82,13 @@
           <p>生日禮物|情人節禮物|閨蜜禮物</p>
           <br />
           <div style="flex-direction: row">
-            <img src="../../../images/Group 26.png" width="50" />
+            <img src="../../../images/Group26.png" width="50" />
             <img src="../../../images/Polygon 1.png" width="10" />
-            <img src="../../../images/Group 25.png" width="50" />
+            <img src="../../../images/Group25.png" width="50" />
             <img src="../../../images/Polygon 1.png" width="10" />
-            <img src="../../../images/Group 23.png" width="50" />
+            <img src="../../../images/Group23.png" width="50" />
             <img src="../../../images/Polygon 1.png" width="10" />
-            <img src="../../../images/Group 24.png" width="50" />
+            <img src="../../../images/Group24.png" width="50" />
           </div>
           <br />
           <n-button round size="large" color="#CA9E" @click="ButtonClickCuzInfo" style="margin-top: 10px">客製服務</n-button>
