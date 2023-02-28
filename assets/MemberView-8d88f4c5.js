@@ -1,0 +1,1 @@
+import{b as e,e as s,a5 as a,g as o,w as t,a6 as r,ag as _}from"./plugin-vueexport-helper-542923d8.js";const l={id:"admin-member"},d=r("h1",{class:"text-center"},"會員管理",-1);function m(f,p){const c=e("v-col"),n=e("v-row");return s(),a("div",l,[o(n,null,{default:t(()=>[o(c,{cols:"12"},{default:t(()=>[d]),_:1})]),_:1})])}const i={},v=_(i,[["render",m]]);export{v as default};
