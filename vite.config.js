@@ -34,5 +34,18 @@ export default defineConfig({
   },
   server: {
     port: 3000
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        // https://github.com/rollup/rollup/blob/master/src/utils/sanitizeFileName.ts
+        sanitizeFileName(name) {
+          const match = DRIVE_LETTER_REGEX.exec(name)
+          const driveLetter = match ? match[0] : ''
+          // substr 是被淘汰語法，因此要改 slice
+          return driveLetter + name.slice(driveLetter.length).replace(INVALID_CHAR_REGEX, '')
+        }
+      }
+    }
   }
 })
