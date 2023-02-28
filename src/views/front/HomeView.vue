@@ -83,11 +83,11 @@
           <br />
           <div style="flex-direction: row">
             <img src="../../../images/Group26.png" width="50" />
-            <img src="../../../images/Polygon 1.png" width="10" />
+            <img src="../../../images/Polygon1.png" width="10" />
             <img src="../../../images/Group25.png" width="50" />
-            <img src="../../../images/Polygon 1.png" width="10" />
+            <img src="../../../images/Polygon1.png" width="10" />
             <img src="../../../images/Group23.png" width="50" />
-            <img src="../../../images/Polygon 1.png" width="10" />
+            <img src="../../../images/Polygon1.png" width="10" />
             <img src="../../../images/Group24.png" width="50" />
           </div>
           <br />
