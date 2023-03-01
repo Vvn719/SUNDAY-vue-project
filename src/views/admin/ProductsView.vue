@@ -205,6 +205,10 @@ const categories = [
   {
     label: '客製禮物 CustomizedGift',
     value: '客製禮物'
+  },
+  {
+    label: '手作課程 CourseInfo',
+    value: '手作課程'
   }
 ]
 

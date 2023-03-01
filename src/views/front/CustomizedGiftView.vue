@@ -59,29 +59,29 @@
               <n-tab-pane name="耳針" tab="耳針" style="display: flex" value="耳針" :class="activeTab === '耳針' ? 'active' : ''" @click="activeTab = '耳針'">
                 <n-radio :checked="checkedValue === '經典金銀-耳針'" value="經典金銀-耳針" name="經典金銀-耳針" @change="handleChange" for="質感U字-珠型耳夾">
                   <p>經典款式-耳針</p>
-                  <n-image src="../../../images/C-1.png" width="90" />
+                  <n-image src="../../../images/C1.png" width="90" />
                 </n-radio>
                 <br />
                 <n-radio :checked="checkedValue === '特殊款式-耳勾'" value="特殊款式-耳勾" name="特殊款式-耳勾" @change="handleChange">
                   <p>特殊款式-耳勾</p>
-                  <n-image src="../../../images/C-2.png" width="90" />
+                  <n-image src="../../../images/C2.png" width="90" />
                 </n-radio>
               </n-tab-pane>
               <n-tab-pane name="耳夾" tab="耳夾" style="display: flex" value="耳夾" :class="activeTab === '耳夾' ? 'active' : ''" @click="activeTab = '耳夾'">
                 <n-radio :checked="checkedValue === '質感U字-珠型耳夾'" value="質感U字-珠型耳夾" name="質感U字-珠型耳夾" @change="handleChange">
                   <p>質感U字-珠型</p>
-                  <n-image src="../../../images/C-2.png" width="90" />
+                  <n-image src="../../../images/C2.png" width="90" />
                 </n-radio>
                 <br />
                 <n-radio :checked="checkedValue === '經典金屬-彈簧耳夾'" value="經典金屬-彈簧耳夾" name="經典金屬-彈簧耳夾" @change="handleChange">
                   <p>經典金屬-彈簧</p>
-                  <n-image src="../../../images/C-1.png" width="90" />
+                  <n-image src="../../../images/C1.png" width="90" />
                 </n-radio>
                 <br />
 
                 <n-radio :checked="checkedValue === '質感金屬-螺旋耳夾'" value="質感金屬-螺旋耳夾" name="質感金屬-螺旋耳夾" @change="handleChange">
                   <p>質感金屬-螺旋</p>
-                  <n-image src="../../../images/C-2.png" width="90" />
+                  <n-image src="../../../images/C2.png" width="90" />
                 </n-radio>
                 <br />
               </n-tab-pane>
