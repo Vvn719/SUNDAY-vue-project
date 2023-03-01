@@ -8,6 +8,7 @@
               <img src="../../images/SUNDAY-LOGO-02.png" />
             </div>
           </a>
+
           <div class="menu" collapse-mode="width">
             <n-menu v-model:value="activeKey" mode="horizontal" :options="menuOptions" :collapsed-width="902" />
             <n-badge class="CtNum" :value="cart"></n-badge>
@@ -256,6 +257,21 @@ const menuOptions = [
         RouterLink,
         {
           to: {
+            name: 'orders'
+          }
+        },
+        { default: () => ' ' }
+      ),
+    key: 'order',
+    icon: renderIcon(OrderIcon),
+    show: user.role == 0
+  },
+  {
+    label: () =>
+      h(
+        RouterLink,
+        {
+          to: {
             name: 'login'
           }
         },
@@ -428,7 +444,7 @@ body {
         justify-content: flex-end;
 
         .n-badge-sup {
-          position: absolute;
+          position: relative;
           padding: 1px;
           padding-right: 2px;
           background: rgba(116, 42, 42, 0.2);
