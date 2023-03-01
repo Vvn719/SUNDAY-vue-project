@@ -22,21 +22,45 @@
       <hr />
     </div>
     <br />
-
-    <div class="CContent"></div>
+    <div class="CContent" v-for="product in filterProducts" :key="product._id">
+      <CourseCard v-bind="product" style="margin-bottom: 20px; margin-top: 20px" />
+    </div>
   </div>
   <br />
   <br />
-  <n-button round size="large" color="#CA9E" @click="ButtonClickNewArrival" style="margin-bottom: 20vh">前往選購</n-button>
+  <n-button round size="large" color="#CA9E" @click="ButtonClickNewArrival" style="margin-bottom: 20vh">更多款式</n-button>
+
+  <n-modal v-model:show="showModal2" preset="card" title="  " positive-text="確認" @positive-click="submitCallback" style="text-align: left" size="small">
+    <n-form ref="valid" :model="form" :rule="rules" show-require-mark>
+      <h2>預約課程</h2>
+      <div class="item">
+        <n-form-item label="商品名稱">
+          <n-input />
+        </n-form-item>
+        <n-form-item label="商品名稱">
+          <n-input />
+        </n-form-item>
+        <n-form-item label="商品名稱">
+          <n-input />
+        </n-form-item>
+        <n-form-item label="商品名稱">
+          <n-input />
+        </n-form-item>
+        <n-form-item label="商品名稱">
+          <n-input />
+        </n-form-item>
+      </div>
+    </n-form>
+  </n-modal>
 </template>
 
 <script setup>
-import { reactive, ref, watch } from 'vue'
-import { useRoute, useRouter, RouterLink } from 'vue-router'
+import { ref } from 'vue'
+import { useRouter, RouterLink } from 'vue-router'
 import { api } from '@/plugins/axios'
-import { useUserStore } from '@/stores/user'
 import { NIcon } from 'naive-ui'
 import { FlowerOutline as flowerIcon, HeartOutline as LoveIcon, CartOutline as CartIcon } from '@vicons/ionicons5'
+import CourseCard from '../../components/CourseCard.vue'
 
 function renderIcon(icon) {
   return () => h(NIcon, null, { default: () => h(icon) })
@@ -118,6 +142,23 @@ const menuOptions = [
     key: 'CourseInfo'
   }
 ]
+
+const products = reactive([])
+
+const filterProducts = computed(() => {
+  return products.filter(item => {
+    return item.category.includes('手作課程') && item.sell === true
+  })
+})
+
+;(async () => {
+  try {
+    const { data } = await api.get('/products/all')
+    products.push(...data.result)
+  } catch (error) {
+    message.error(error?.response?.data?.message || '發生錯誤')
+  }
+})()
 </script>
 
 <style lang="scss">
@@ -142,7 +183,9 @@ const menuOptions = [
     margin: auto;
   }
   .CContent {
+    width: 100%;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
   }
 }

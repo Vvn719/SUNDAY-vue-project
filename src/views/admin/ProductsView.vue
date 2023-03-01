@@ -112,7 +112,7 @@
 
 <script setup>
 import { reactive } from 'vue'
-import { api } from '@/plugins/axios'
+import { api, apiAuth } from '@/plugins/axios'
 import { useRouter } from 'vue-router'
 import validator from 'validator'
 import { TrashOutline as TrashIcon, CreateOutline as CreateIcon, CaretUpCircleOutline as upIcon } from '@vicons/ionicons5'
@@ -206,6 +206,10 @@ const categories = [
     label: '客製禮物 CustomizedGift',
     value: '客製禮物'
   },
+  {
+    label: '手作課程 CourseInfo',
+    value: '手作課程'
+  }
 ]
 
 function validateName(rule, value) {
@@ -290,14 +294,13 @@ const submit = async () => {
       fd.append('image', item)
     })
   }
-
   try {
     if (form._id.length === 0) {
-      const { data } = await apiAuth.post('/products', fd)
+      const { data } = await api.post('/products', fd)
       products.push(data.result)
       message.success('新增成功')
     } else {
-      const { data } = await apiAuth.patch('/products/' + form._id, fd)
+      const { data } = await api.patch('/products/' + form._id, fd)
       products[form.idx] = data.result
       message.success('編輯成功')
     }
@@ -310,10 +313,11 @@ const submit = async () => {
 
 ;(async () => {
   try {
-    const { data } = await api.get('/products/all')
+    const { data } = await apiAuth.get('/products/all')
     products.push(...data.result)
   } catch (error) {
     message.error(error?.response?.data?.message || '發生錯誤')
+    console.log(error)
   }
 })()
 </script>

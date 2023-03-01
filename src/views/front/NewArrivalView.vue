@@ -3,7 +3,7 @@
     <div class="menu" collapse-mode="width">
       <n-menu v-model:value="activeKey" mode="horizontal" :options="menuOptions" :collapsed-width="902" />
     </div>
-    <div class="NAcontent" v-for="product in products" :key="product._id">
+    <div class="NAcontent" v-for="product in filterProducts" :key="product._id">
       <ProductCard v-bind="product" />
     </div>
   </div>
@@ -31,6 +31,12 @@ const products = reactive([])
 function renderIcon(icon) {
   return () => h(NIcon, null, { default: () => h(icon) })
 }
+
+const filterProducts = computed(() => {
+  return products.filter(item => {
+    return item.category.includes('耳夾系列') || item.category.includes('耳針系列') || (item.category.includes('口罩鍊系列') && item.sell === true)
+  })
+})
 
 const activeKey = ref(null)
 
