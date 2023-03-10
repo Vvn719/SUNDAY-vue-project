@@ -1,3 +1,4 @@
+【管理者帳號】
 admin:admin@gmail.com
 密碼:1234
 
