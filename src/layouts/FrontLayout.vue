@@ -292,11 +292,11 @@ const menuOptions = [
         icon: renderIcon(LoginIcon),
         show: !user.role === '0 || 1'
       },
-      {
-        label: '會員資料',
-        key: 'memberList',
-        icon: renderIcon(PersonIcon)
-      },
+      // {
+      //   label: '會員資料',
+      //   key: 'memberList',
+      //   icon: renderIcon(PersonIcon)
+      // },
       {
         label: () =>
           h(
@@ -361,20 +361,20 @@ const menuOptions = [
         label: '管理頁面',
         key: 'people',
         children: [
-          {
-            label: () =>
-              h(
-                RouterLink,
-                {
-                  to: {
-                    name: 'adminMember'
-                  }
-                },
-                { default: () => '會員管理' }
-              ),
-            key: 'memberList',
-            icon: renderIcon(PersonIcon)
-          },
+          // {
+          //   label: () =>
+          //     h(
+          //       RouterLink,
+          //       {
+          //         to: {
+          //           name: 'adminMember'
+          //         }
+          //       },
+          //       { default: () => '會員管理' }
+          //     ),
+          //   key: 'memberList',
+          //   icon: renderIcon(PersonIcon)
+          // },
           {
             label: () =>
               h(
