@@ -46,8 +46,8 @@ const dialog = useDialog()
 const loading = ref(false)
 
 const form = reactive({
-  account: '5555@yahoo.com',
-  password: '1234'
+  account: '',
+  password: ''
 })
 
 const login = async () => {

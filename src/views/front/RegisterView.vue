@@ -64,10 +64,10 @@ const valid = ref(null)
 const loading = ref(false)
 
 const form = reactive({
-  account: '@yahoo.com',
-  email: '@yahoo.com',
-  password: '1234',
-  passwordConfirm: '1234'
+  account: '',
+  email: '',
+  password: '',
+  passwordConfirm: ''
 })
 
 const rules = {
